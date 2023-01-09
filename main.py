@@ -13,11 +13,11 @@ def change_position():
     global x_place, y_place
     while True:
         y = random.randint(80, 180)
-        if y_place - 20 > y or y > y_place + 20:
+        if y_place - 30 > y or y > y_place + 30:
             break
     while True:
         x = random.randint(150, 250)
-        if x_place - 20 > x or x > x_place + 20:
+        if x_place - 30 > x or x > x_place + 30:
             break
     x_place = x
     y_place = y
