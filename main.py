@@ -8,9 +8,6 @@ y_place = 130
 def changeOnHover(button):
     button.bind("<Enter>", func=lambda e: change_position())
 
-    # background color on leving widget
-    # button.bind("<Leave>", func=lambda e: change_position())
-
 
 def change_position():
     global x_place, y_place
@@ -18,12 +15,10 @@ def change_position():
         y = random.randint(80, 180)
         if y_place - 20 > y or y > y_place + 20:
             break
-        print(y)
     while True:
         x = random.randint(150, 250)
         if x_place - 20 > x or x > x_place + 20:
             break
-        print(x)
     x_place = x
     y_place = y
     no.place(x=x, y=y)
