@@ -24,14 +24,20 @@ def change_position():
     no.place(x=x, y=y)
 
 
+def gave_up():
+    label.config(text=" I Knew it 😆")
+    yes.destroy()
+    no.destroy()
+
 window = Tk()
 window.config(padx=30, pady=50)
 window.title('Flashing Card')
 window.geometry("400x300")
 
-Label(window, text="Are u Dumb?", font=('SanSerif', 40, 'bold'), ).grid(column=0, row=0)
+label = Label(window, text="Are u Dumb?", font=('SanSerif', 40, 'bold'), )
+label.grid(column=0, row=0)
 
-yes = Button(window, text="Yes", width=7, font="SanSerif 15", bg="#E0E0E0", border=1, relief="solid")
+yes = Button(window, text="Yes", width=7, font="SanSerif 15", bg="#E0E0E0", border=1, relief="solid", command=gave_up)
 no = Button(window, text="No", width=7, font="SanSerif 15", bg="#E0E0E0", border=1, relief="solid",
             command=change_position)
 yes.place(x=35, y=130)
